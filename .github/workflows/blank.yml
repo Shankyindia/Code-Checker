@@ -1,0 +1,12 @@
+name: Action
+on:
+  workflow_dispatch:
+jobs:
+  checkout_job:
+    runs-on: self-hosted
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v5.0.0
+      
+  
+  
