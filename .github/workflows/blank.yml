@@ -8,5 +8,31 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v5.0.0
       
+    - name: Install Terraform
+      uses: little-core-labs/install-terraform@v2.0.0
+      with:
+        version: latest
+
+    - name: Azure Login
+      uses: Azure/login@v2.3.0
+      with:
+        client-id: 100d1d84-2d4f-4ee7-a9ac-2ee60f677225
+        tenant-id: ec84cc3b-8d4d-4362-b666-466802d7ba4e
+        subscription-id: 85bce315-2d40-4002-a3d1-b7f28202855c
+        
+    - name: Terraform Init
+      run: terraform init -input=false
+
+    - name: Terraform Plan
+      run: terraform plan -no-color -input=false
+
+    - name: Terraform Apply
+      run: terraform apply --auto-approve
+      
+    
+  
+        
+          
+      
   
   
