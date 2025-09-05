@@ -11,7 +11,7 @@ terraform {
 #     container_name       = "shankycon"
 #     key                  = "terraform.tfstate"
 #   }
-# }
+}
 
 provider "azurerm" {
   # Configuration options
